@@ -11,3 +11,7 @@ pit pull
 gitk  
 git checkout <branch_to_checkout_to>  
 git clone <link>
+git fetch --prune
+git pull --prune
+
+git merge --no-ff feature-x
