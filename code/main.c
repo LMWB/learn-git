@@ -12,7 +12,7 @@ void print_version(void){
 }
 
 void new_feature(void){
-    for(int i = 0; i<10; i++){
+    for(int i = 0; i<5; i++){
         printf("new feature\n");
     }
 }
