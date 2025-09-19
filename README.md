@@ -10,3 +10,4 @@ git push
 pit pull  
 gitk  
 git checkout <branch_to_checkout_to>  
+git clone <link>
