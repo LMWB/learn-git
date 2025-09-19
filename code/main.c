@@ -7,7 +7,14 @@ void count_to_ten(void){
     }
 }
 
+void print_version(void){
+    printf("Version %d.%d",VERSION_MAJOR, VERSION_MINOR);
+}
+
 int main(void){
+
+    print_version();
+
     count_to_ten();
     while (1)
     {
