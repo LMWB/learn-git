@@ -1,27 +1,24 @@
 # learn-git
 learn how to use git and test, commands, commits and rollbacks
 
-# git commands
+# git commands  
 git status   
 git add .  
 git commit -m 'some text explaining this commit'  
-git push
 git push  
 pit pull  
 gitk  
 git checkout <branch_to_checkout_to>  
-git clone <link>
-git fetch --prune
-git pull --prune
-
-git merge --no-ff feature-x
-
+git clone <link>  
+git fetch --prune  
+git pull --prune  
+git merge --no-ff feature-x  
 
 📝 Git Feature Branch Workflow (Cheat-Sheet)
 1. Create a new branch (from main)
 ```
 git checkout main
-git pull --prune         # make sure main is up-to-date
+git pull --prune # make sure main is up-to-date
 git checkout -b feature-x
 ```
 👉 You now have a local feature-x branch.
