@@ -53,6 +53,8 @@ a) Delete your local branch (safe if merged):
 ```
 git branch -d feature-x
 ```
+make sure it's deleted on git-hub (remote) as well! Must be done manually online on git-hub or has been done automated during pull request.   
+
 b) Delete the remote branch (if you created it):
 ```
 git fetch --prune
