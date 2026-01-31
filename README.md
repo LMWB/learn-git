@@ -67,3 +67,19 @@ Commit changes visually
 Push branch → creates it on GitHub
 Merge PR → GitHub cleans up automatically (if you check the “delete branch” box)
 Fetch + prune → clears stale remote references
+
+# How to check your upstream (this is the key command)
+Run:
+```
+git branch -vv
+```
+
+You should see something like:
+
+```css
+* main  a1b2c3d [origin/main] Commit message
+```
+
+That [origin/main] part is crucial.
+✅ Present → git push works
+❌ Missing → Git doesn’t know where to push
