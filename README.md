@@ -25,10 +25,10 @@ Lädt die Änderungen vom Server, ohne den eigenen Code zu berühren.
 `git log --oneline main..origin/main`  
 
 4. Änderungen sauber einfügen  
-Falls du noch keine eigenen neuen Commits hast:  
+4.1 Falls du noch keine eigenen neuen Commits hast:  
 `git pull`  
 
-Falls du schon lokal gearbeitet/committet hast (hält die Historie linear):  
+4.2 Falls du schon lokal gearbeitet/committet hast (hält die Historie linear):  
 `git pull --rebase`  
 
 # Git Feature Branch Workflow
