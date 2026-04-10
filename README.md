@@ -85,7 +85,7 @@ That [origin/main] part is crucial.
 ❌ Missing → Git doesn’t know where to push
 
 # How to synch Remote and Local in case they have different states
-Given the situation that one branch (e.g. main) has commits that are not on your local copy but you also have commits which ar not added and commited to remote.  
+Given the situation that one branch (e.g. main) has commits that are not on your local copy but you also have commits which are not added and commited to remote.  
 
 ## Option 1: Der saubere Weg (Stash & Pull)
 Diese Methode ist am sichersten, da sie deine aktuellen (ungespeicherten) Änderungen kurzzeitig "parkt", die Änderungen deines Kollegen holt und deine Arbeit dann wieder oben drauf legt. 
