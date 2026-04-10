@@ -1,5 +1,5 @@
 # learn-git
-learn how to use git and test, commands, commits and rollbacks
+learn how to use git on terminal
 
 # git commands  
 git status   
@@ -14,7 +14,7 @@ git fetch --prune
 git pull --prune  
 git merge --no-ff feature-x  
 
-📝 Git Feature Branch Workflow (Cheat-Sheet)
+# Git Feature Branch Workflow
 1. Create a new branch (from main)
 ```
 git checkout main
@@ -83,3 +83,39 @@ You should see something like:
 That [origin/main] part is crucial.
 ✅ Present → git push works
 ❌ Missing → Git doesn’t know where to push
+
+# How to synch Remote and Local in case they have different states
+Given the situation that one branch (e.g. main) has commits that are not on your local copy but you also have commits which ar not added and commited to remote.  
+
+## Option 1: Der saubere Weg (Stash & Pull)
+Diese Methode ist am sichersten, da sie deine aktuellen (ungespeicherten) Änderungen kurzzeitig "parkt", die Änderungen deines Kollegen holt und deine Arbeit dann wieder oben drauf legt. 
+
+Änderungen zwischenparken:
+> git stash
+(Dies räumt dein Arbeitsverzeichnis auf und speichert deine Änderungen in einem temporären Speicher.)
+
+Updates vom Server holen:
+> git pull origin main
+
+Deine Änderungen zurückholen:
+> git stash pop
+
+Normal weitermachen:
+Jetzt kannst du wie gewohnt git add ., git commit -m "..." und git push ausführen.
+
+## Option 2: Erst Committen, dann Rebase (Best Practice)
+Wenn du deine Arbeit lieber direkt dokumentieren willst, bevor du die Sachen vom Kollegen ziehst:
+
+Lokal committen:
+> git add .
+> git commit -m "Mein aktueller Stand"
+
+Mit Rebase ziehen:
+> git pull --rebase origin main
+
+Warum --rebase? Es nimmt deinen neuen Commit, setzt ihn kurz beiseite, holt die Änderungen vom Kollegen und setzt deinen Commit dann ans Ende der Kette. Das hält die Historie sauber und linear.
+
+Hochladen:
+> git push origin main
+
+**Tipp:** Nutze Option 1, wenn deine Änderungen noch sehr "unfertig" sind, und Option 2, wenn du eigentlich bereit zum Pushen wärst.
