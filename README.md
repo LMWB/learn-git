@@ -14,6 +14,23 @@ git fetch --prune
 git pull --prune  
 git merge --no-ff feature-x  
 
+# 🚀 Meine Git Start-Routine
+1. Den Status prüfen (Der Blick in den Briefkasten)
+`git fetch`  
+Lädt die Änderungen vom Server, ohne den eigenen Code zu berühren.
+
+2. Was hat der Kollege gemacht?
+`git status`  
+**Optional:** Zeigt die Commit-Nachrichten des Kollegen
+`git log --oneline main..origin/main`
+
+4. Änderungen sauber einfügen
+Falls du noch keine eigenen neuen Commits hast:
+`git pull`
+
+Falls du schon lokal gearbeitet/committet hast (hält die Historie linear):
+`git pull --rebase`
+
 # Git Feature Branch Workflow
 1. Create a new branch (from main)
 ```
