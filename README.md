@@ -133,3 +133,23 @@ Warum Option 2 (Rebase) so gut ist
 Durch den Befehl `git pull --rebase` wird verhindert, dass im Verlauf ein unnötiger „Merge-Commit“ (wie z. B. "Merge branch 'main' of github.com...") entsteht.  
 
 Stattdessen die Historie jetzt so aus, als hättest deine Arbeit erst begonnen, nachdem der Kollege seine Dateien hochgeladen hatte. Das hält den Branch sauber und übersichtlich. 
+
+## 💡 Profi-Tipp
+Solltest du mal mitten in einer Arbeit stecken und der `pull` verweigert den Dienst, weil du ungespeicherte Änderungen hast, merk dir das "Parkmanöver":
+- `git stash` (Arbeit kurz wegpacken)
+- `git pull` (Updates holen)
+- `git stash pop` (Arbeit wieder herausholen)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
