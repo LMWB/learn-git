@@ -91,15 +91,19 @@ Given the situation that one branch (e.g. main) has commits that are not on your
 Diese Methode ist am sichersten, da sie deine aktuellen (ungespeicherten) Änderungen kurzzeitig "parkt", die Änderungen deines Kollegen holt und deine Arbeit dann wieder oben drauf legt. 
 
 Änderungen zwischenparken:
-> git stash
+```
+git stash
+```
 (Dies räumt dein Arbeitsverzeichnis auf und speichert deine Änderungen in einem temporären Speicher.)
 
 Updates vom Server holen:
-> git pull origin main
-
+```
+git pull origin main
+```
 Deine Änderungen zurückholen:
-> git stash pop
-
+```
+git stash pop
+```
 Normal weitermachen:
 Jetzt kannst du wie gewohnt git add ., git commit -m "..." und git push ausführen.
 
@@ -107,15 +111,18 @@ Jetzt kannst du wie gewohnt git add ., git commit -m "..." und git push ausführ
 Wenn du deine Arbeit lieber direkt dokumentieren willst, bevor du die Sachen vom Kollegen ziehst:
 
 Lokal committen:
-> git add .
-> git commit -m "Mein aktueller Stand"
-
+```
+git add .
+git commit -m "Mein aktueller Stand"
+```
 Mit Rebase ziehen:
-> git pull --rebase origin main
-
+```
+git pull --rebase origin main
+```
 Warum --rebase? Es nimmt deinen neuen Commit, setzt ihn kurz beiseite, holt die Änderungen vom Kollegen und setzt deinen Commit dann ans Ende der Kette. Das hält die Historie sauber und linear.
 
 Hochladen:
-> git push origin main
-
+```
+git push origin main
+```
 **Tipp:** Nutze Option 1, wenn deine Änderungen noch sehr "unfertig" sind, und Option 2, wenn du eigentlich bereit zum Pushen wärst.
