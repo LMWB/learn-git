@@ -119,10 +119,17 @@ Mit Rebase ziehen:
 ```
 git pull --rebase origin main
 ```
-Warum --rebase? Es nimmt deinen neuen Commit, setzt ihn kurz beiseite, holt die Änderungen vom Kollegen und setzt deinen Commit dann ans Ende der Kette. Das hält die Historie sauber und linear.
+Warum --rebase? Es nimmt deinen neuen Commit, setzt ihn kurz beiseite, holt die Änderungen vom Kollegen und setzt deinen Commit dann ans Ende der Kette. Das hält die Historie sauber und linear.  
 
 Hochladen:
 ```
 git push origin main
 ```
 **Tipp:** Nutze Option 1, wenn deine Änderungen noch sehr "unfertig" sind, und Option 2, wenn du eigentlich bereit zum Pushen wärst.
+
+Das einfache `git push` funktioniert auch. Git ist heute sehr schlau vorkonfiguriert ist. In der Standardeinstellung geht Git davon aus, dass dein aktueller Branch (in deinem Fall main) auf den gleichnamigen Branch beim Standard-Server (origin) hochgeladen werden soll. Das Kommando `git push` ist also quasi die Kurzform von `git push origin main`.  
+
+Warum Option 2 (Rebase) so gut ist
+Durch den Befehl `git pull --rebase` wird verhindert, dass im Verlauf ein unnötiger „Merge-Commit“ (wie z. B. "Merge branch 'main' of github.com...") entsteht.  
+
+Stattdessen die Historie jetzt so aus, als hättest deine Arbeit erst begonnen, nachdem der Kollege seine Dateien hochgeladen hatte. Das hält den Branch sauber und übersichtlich. 
