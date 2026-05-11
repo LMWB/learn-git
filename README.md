@@ -94,6 +94,15 @@ Push branch → creates it on GitHub
 Merge PR → GitHub cleans up automatically (if you check the “delete branch” box)
 Fetch + prune → clears stale remote references
 
+# Fix .gitignore after commit 
+If you have not pushed the changes already do this  
+
+```
+git rm -r --cached .
+git add .
+git commit -m 'clear git cache'
+git push
+```
 # How to check your upstream (this is the key command)
 Run:
 ```
